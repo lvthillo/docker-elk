@@ -17,7 +17,6 @@ services:
       - 12201:12201/udp
     volumes:
       - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro 
-      #- ./logstash.conf:/etc/logstash/conf.d/logstash.conf
     networks:
       - logging-network
 
