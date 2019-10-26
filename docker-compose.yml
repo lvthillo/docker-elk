@@ -38,6 +38,9 @@ services:
     logging:
       driver: gelf
       options:
+        # Use udp://host.docker.internal:12201 when you are using Docker Desktop for Mac
+        # docs: https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host
+        # issue: https://github.com/lvthillo/docker-elk/issues/1
         gelf-address: "udp://localhost:12201"
 
 networks: 
